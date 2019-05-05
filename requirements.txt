@@ -1,3 +1,4 @@
 numpy
 selectivesearch
-
+sklearn
+opencv-contrib-python
