@@ -149,7 +149,9 @@ def main():
         saver = tf.train.Saver()
 
     # Do training
-    with tf.Session(graph=graph) as session:
+    cpu_count = 1
+    config = tf.ConfigProto(intra_op_parallelism_threads=cpu_count, inter_op_parallelism_threads=cpu_count, allow_soft_placement=True, device_count={"CPU": cpu_count})
+    with tf.Session(graph=graph, config=config) as session:
         tf.global_variables_initializer().run()
         if initial_weights is not None:
             session.run(assign_ops)

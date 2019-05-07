@@ -2,3 +2,4 @@ numpy
 selectivesearch
 sklearn
 opencv-contrib-python
+tensorflow==1.5

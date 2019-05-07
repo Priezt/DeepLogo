@@ -1,3 +1,7 @@
 *.pyc
 flickr_logos_27_dataset/
 *.tar.gz
+*.pickle
+*.whl
+test/
+models/
